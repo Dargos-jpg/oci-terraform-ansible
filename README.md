@@ -1,17 +1,17 @@
 # OCI Terraform + Ansible Lab
 
-Proiect practic de Infrastructure as Code, construit pentru a demonstra
-competențe reale în Terraform, Ansible, networking/security și CI/CD —
-folosind infrastructură permanent gratuită (OCI Always Free).
+Proiect de Infrastructure as Code cu Terraform, Ansible, networking/security si CI/CD,
+pe infrastructura OCI Always Free (gratuit permanent, spre deosebire de free tier-ul
+de 12 luni de la AWS/Azure).
 
-## Arhitectură
+## Arhitectura
 
 ```
                     Internet
                         |
                   [Internet Gateway]
                         |
-                  [Security List]  <- SSH doar de la IP-ul meu, HTTP/HTTPS public
+                  [Security List]  <- SSH doar de la IP autorizat, HTTP/HTTPS public
                         |
                     [Subnet public 10.0.1.0/24]
                     /                        \
@@ -21,7 +21,7 @@ folosind infrastructură permanent gratuită (OCI Always Free).
         - fail2ban, UFW              - fail2ban, UFW
 ```
 
-## Structură repo
+## Structura repo
 
 ```
 .
@@ -44,16 +44,16 @@ folosind infrastructură permanent gratuită (OCI Always Free).
 
 ## Setup
 
-1. `cp terraform.tfvars.example terraform.tfvars` și completează valorile
-   tale (OCID-uri, fingerprint, cale cheie, IP-ul tău public).
+1. `cp terraform.tfvars.example terraform.tfvars`, apoi se completeaza valorile
+   (OCID-uri, fingerprint, cale cheie, IP public).
 2. `terraform init`
-3. `terraform plan` — verifici ce urmează să se creeze
-4. `terraform apply` — provizionează infrastructura
-5. `ansible-playbook -i ansible/inventory.ini ansible/site.yml` — configurează VM-urile
+3. `terraform plan` - arata ce urmeaza sa se creeze
+4. `terraform apply` - provizioneaza infrastructura
+5. `ansible-playbook -i ansible/inventory.ini ansible/site.yml` - configureaza VM-urile
 
 ## Status
 
-- [x] Structură repo + module Terraform (network, compute)
+- [x] Structura repo + module Terraform (network, compute)
 - [ ] Cont OCI creat + chei API generate
 - [ ] `terraform apply` rulat cu succes
 - [ ] Rol Ansible hardening
@@ -62,4 +62,4 @@ folosind infrastructură permanent gratuită (OCI Always Free).
 - [ ] GitHub Actions - plan automat pe PR
 - [ ] GitHub Actions - apply automat pe merge + ansible
 
-Detalii tehnice și decizii luate pe parcurs, în [NOTES.md](./NOTES.md).
+Detalii tehnice si decizii, in [NOTES.md](./NOTES.md).

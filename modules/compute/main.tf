@@ -1,5 +1,5 @@
 # modulul compute: instante VM.Standard.A1.Flex (ARM, Always Free)
-# folosim data source ca sa luam automat cea mai recenta imagine Ubuntu, fara OCID hardcodat
+# data source-ul de mai jos ia automat cea mai recenta imagine Ubuntu, ca sa nu ramana un OCID hardcodat care expira
 
 data "oci_identity_availability_domains" "ads" {
   compartment_id = var.compartment_ocid
@@ -22,7 +22,7 @@ resource "oci_core_instance" "node" {
   shape                = "VM.Standard.A1.Flex"
 
   shape_config {
-    # Always Free total: 4 OCPU / 24GB RAM impartite pe cate instante vrei
+    # Always Free total: 4 OCPU / 24GB RAM impartite in functie de numarul de instante
     ocpus         = var.ocpus_per_instance
     memory_in_gbs = var.memory_per_instance
   }

@@ -18,7 +18,7 @@ terraform {
   #     name = "oci-terraform-ansible"
   #   }
   # }
-  # ↑ dezactivat momentan — activam dupa ce mergem local cu state
+  # dezactivat deocamdata, ramane local pana cand merita mutat state-ul in remote
 }
 
 provider "oci" {

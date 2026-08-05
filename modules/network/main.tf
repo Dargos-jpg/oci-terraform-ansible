@@ -26,7 +26,7 @@ resource "oci_core_route_table" "main" {
 }
 
 # security list - aici e partea de firewall la nivel de cloud
-# regula: SSH doar de la IP-ul tau, HTTP/HTTPS deschise public, restul blocat
+# regula: SSH doar de la IP-ul autorizat, HTTP/HTTPS deschise public, restul blocat
 resource "oci_core_security_list" "main" {
   compartment_id = var.compartment_ocid
   vcn_id         = oci_core_vcn.main.id
@@ -64,7 +64,7 @@ resource "oci_core_security_list" "main" {
     }
   }
 
-  # port pentru Netdata / Prometheus - restrictionat tot la IP-ul tau
+  # port pentru Netdata / Prometheus - restrictionat tot la IP-ul autorizat
   ingress_security_rules {
     source   = var.my_ip_cidr
     protocol = "6"

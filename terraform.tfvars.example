@@ -1,4 +1,4 @@
-# copiaza acest fisier in terraform.tfvars si completeaza cu valorile tale reale
+# acest fisier se copiaza in terraform.tfvars si se completeaza cu valorile reale
 # terraform.tfvars NU se comite niciodata in git (e deja in .gitignore)
 
 tenancy_ocid      = "ocid1.tenancy.oc1..xxxxxxxx"
@@ -6,8 +6,8 @@ user_ocid         = "ocid1.user.oc1..xxxxxxxx"
 fingerprint       = "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
 private_key_path  = "~/.oci/oci_api_key.pem"
 region            = "eu-frankfurt-1"
-compartment_ocid  = "ocid1.tenancy.oc1..xxxxxxxx" # poti folosi tenancy_ocid ca root compartment la inceput
+compartment_ocid  = "ocid1.tenancy.oc1..xxxxxxxx" # se poate folosi tenancy_ocid ca root compartment la inceput
 
 project_name         = "oci-terraform-ansible"
 ssh_public_key_path  = "~/.ssh/id_rsa.pub"
-my_ip_cidr           = "82.77.XX.XX/32" # afla-ti IP-ul de pe whatismyip.com si adauga /32
+my_ip_cidr           = "82.77.XX.XX/32" # IP-ul se afla de pe whatismyip.com, apoi se adauga /32

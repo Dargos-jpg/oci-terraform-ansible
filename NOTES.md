@@ -1,13 +1,12 @@
 # Note tehnice
 
-Jurnal de decizii, probleme întâlnite și ce am învățat pe parcurs.
-Util pentru pregătirea de interviu — "povestește-mi despre un proiect tehnic".
+Jurnal de decizii si probleme intalnite pe parcursul proiectului.
 
-## De ce OCI și nu AWS/Azure
+## De ce OCI si nu AWS/Azure
 
-AWS și Azure au free tier limitat la 12 luni, apoi taxează sau șterg
-resursele. OCI Always Free e permanent — important pentru un proiect
-pe care vreau să-l țin activ ca dovadă de lucru, nu doar screenshot-uri.
+AWS si Azure dau free tier doar 12 luni, apoi taxeaza sau sterg resursele.
+OCI Always Free ramane activ permanent, deci setup-ul poate sta functional
+ca proba de lucru, nu doar ca screenshot-uri.
 
 ## De ce module separate (network / compute)
 
@@ -21,6 +20,6 @@ pe care vreau să-l țin activ ca dovadă de lucru, nu doar screenshot-uri.
 
 ...
 
-## Probleme întâlnite
+## Probleme intalnite
 
 ...

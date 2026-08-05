@@ -1,11 +1,11 @@
-# autentificare OCI - completezi cu valorile din API Keys (Identity & Security)
+# autentificare OCI - se completeaza cu valorile din API Keys (Identity & Security)
 variable "tenancy_ocid" {
   description = "OCID-ul tenancy-ului OCI"
   type        = string
 }
 
 variable "user_ocid" {
-  description = "OCID-ul userului tau OCI"
+  description = "OCID-ul userului OCI"
   type        = string
 }
 
@@ -25,7 +25,7 @@ variable "region" {
 }
 
 variable "compartment_ocid" {
-  description = "OCID-ul compartimentului in care creezi resursele (root compartment la inceput e ok)"
+  description = "OCID-ul compartimentului in care se creeaza resursele (root compartment la inceput e ok)"
   type        = string
 }
 
@@ -43,6 +43,6 @@ variable "ssh_public_key_path" {
 }
 
 variable "my_ip_cidr" {
-  description = "IP-ul tau public in format CIDR (ex: 82.77.XX.XX/32) - singurul IP cu voie sa faca SSH"
+  description = "IP public in format CIDR (ex: 82.77.XX.XX/32) - singurul IP cu voie sa faca SSH"
   type        = string
 }
