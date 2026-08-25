@@ -1,5 +1,13 @@
 # modulul de retea: VCN + subnet public + internet gateway + security list
 
+terraform {
+  required_providers {
+    oci = {
+      source = "oracle/oci"
+    }
+  }
+}
+
 resource "oci_core_vcn" "main" {
   compartment_id = var.compartment_ocid
   cidr_block     = "10.0.0.0/16"

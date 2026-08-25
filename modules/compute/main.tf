@@ -1,6 +1,14 @@
 # modulul compute: instante VM.Standard.A1.Flex (ARM, Always Free)
 # data source-ul de mai jos ia automat cea mai recenta imagine Ubuntu, ca sa nu ramana un OCID hardcodat care expira
 
+terraform {
+  required_providers {
+    oci = {
+      source = "oracle/oci"
+    }
+  }
+}
+
 data "oci_identity_availability_domains" "ads" {
   compartment_id = var.compartment_ocid
 }
